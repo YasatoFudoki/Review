@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>民俗学×数理モデル 研究レビュー</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="app-header">
+  <div class="header-inner">
+    <h1 class="app-title">
+      <span class="title-main">民俗学 × 数理モデル</span>
+      <span class="title-sub">既存研究レビュー</span>
+    </h1>
+    <button id="menuToggle" class="menu-toggle" aria-label="フィルターを開く" aria-expanded="false">
+      <span class="menu-icon"></span>
+    </button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside id="filterPanel" class="filter-panel">
+    <div class="filter-panel-inner">
+      <div class="filter-block">
+        <h2 class="filter-heading">表示</h2>
+        <label class="switch-row">
+          <input type="checkbox" id="unreadOnly">
+          <span class="switch-track"><span class="switch-thumb"></span></span>
+          <span class="switch-label">未確認のみ表示</span>
+        </label>
+      </div>
+
+      <div class="filter-block">
+        <h2 class="filter-heading">扱う対象</h2>
+        <div id="subjectFilters" class="chip-group"></div>
+      </div>
+
+      <div class="filter-block">
+        <h2 class="filter-heading">数理モデル</h2>
+        <div id="modelFilters" class="chip-group"></div>
+      </div>
+
+      <div class="filter-block">
+        <button id="resetFilters" class="reset-btn">フィルターをリセット</button>
+      </div>
+
+      <div class="filter-block stats-block">
+        <p id="statsText" class="stats-text"></p>
+      </div>
+    </div>
+  </aside>
+  <div id="overlay" class="overlay"></div>
+
+  <main class="content">
+    <div id="cardList" class="card-list"></div>
+    <p id="emptyMessage" class="empty-message" hidden>該当する研究が見つかりませんでした。</p>
+  </main>
+</div>
+
+<div id="detailModal" class="modal" hidden>
+  <div class="modal-backdrop"></div>
+  <div class="modal-panel" role="dialog" aria-modal="true">
+    <button id="modalClose" class="modal-close" aria-label="閉じる">×</button>
+    <div id="modalBody" class="modal-body"></div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
