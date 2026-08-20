@@ -135,6 +135,7 @@
     card.innerHTML =
       '<div class="card-top">' +
       '<div class="card-badges">' +
+      '<span class="badge badge-year">' + escapeHtml(study.year) + "年</span>" +
       '<span class="badge badge-subject">' + escapeHtml(study.subjectCategory) + "</span>" +
       '<span class="badge badge-model">' + escapeHtml(study.modelCategory) + "</span>" +
       "</div>" +
@@ -230,6 +231,7 @@
     var body = document.getElementById("modalBody");
     body.innerHTML =
       '<div class="modal-meta-row">' +
+      '<span class="badge badge-year">' + escapeHtml(study.year) + "年</span>" +
       '<span class="badge badge-subject">' + escapeHtml(study.subjectCategory) + "</span>" +
       '<span class="badge badge-model">' + escapeHtml(study.modelCategory) + "</span>" +
       "</div>" +

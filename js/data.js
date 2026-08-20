@@ -6,6 +6,7 @@
 var STUDIES = [
   {
     id: "study-01",
+    year: 2013,
     titleJa: "赤ずきんの系統樹",
     titleOriginal: "The Phylogeny of Little Red Riding Hood",
     originalLang: "英語",
@@ -22,6 +23,7 @@ var STUDIES = [
   },
   {
     id: "study-02",
+    year: 2016,
     titleJa: "比較系統解析によるインド・ヨーロッパ語族説話の古い起源の解明",
     titleOriginal:
       "Comparative phylogenetic analyses uncover the ancient roots of Indo-European folktales",
@@ -39,6 +41,7 @@ var STUDIES = [
   },
   {
     id: "study-03",
+    year: 2013,
     titleJa: "ヨーロッパにおけるある説話の集団構造と文化地理学",
     titleOriginal: "Population structure and cultural geography of a folktale in Europe",
     originalLang: "英語",
@@ -55,6 +58,7 @@ var STUDIES = [
   },
   {
     id: "study-04",
+    year: 2017,
     titleJa: "ゲノムデータを用いた説話伝播パターンの推定",
     titleOriginal: "Inferring patterns of folktale diffusion using genomic data",
     originalLang: "英語",
@@ -72,6 +76,7 @@ var STUDIES = [
   },
   {
     id: "study-05",
+    year: 2023,
     titleJa: "シンデレラの系譜樹：ATU510/511のフィロミーム研究",
     titleOriginal: "Cinderella's Family Tree. A Phylomemetic Case Study of ATU 510/511",
     originalLang: "英語",
@@ -88,6 +93,7 @@ var STUDIES = [
   },
   {
     id: "study-06",
+    year: 2016,
     titleJa:
       "赤ずきんは口承民話か文学的創作か：系統ネットワーク分析による起源の検証",
     titleOriginal:
@@ -106,6 +112,7 @@ var STUDIES = [
   },
   {
     id: "study-07",
+    year: 2013,
     titleJa: "ベルベルの空の「宇宙狩猟」神話：旧石器時代神話の系統学的再構築",
     titleOriginal:
       "Une chasse cosmique dans le ciel berbère : reconstruction phylogénétique d'un mythe préhistorique",
@@ -123,6 +130,7 @@ var STUDIES = [
   },
   {
     id: "study-08",
+    year: 2018,
     titleJa: "世界神話の大規模研究",
     titleOriginal: "A Large-Scale Study of World Myths",
     originalLang: "英語",
@@ -139,6 +147,7 @@ var STUDIES = [
   },
   {
     id: "study-09",
+    year: 2012,
     titleJa: "神話ネットワークの普遍的性質",
     titleOriginal: "Universal Properties of Mythological Networks",
     originalLang: "英語",
@@ -155,6 +164,7 @@ var STUDIES = [
   },
   {
     id: "study-10",
+    year: 2013,
     titleJa: "アイスランド人のサガ「イスレンディンガ・ソグル」のネットワーク分析",
     titleOriginal: "Network analysis of the Íslendinga sögur – the Sagas of Icelanders",
     originalLang: "英語",
@@ -171,6 +181,7 @@ var STUDIES = [
   },
   {
     id: "study-11",
+    year: 2015,
     titleJa: "ホメロス『イーリアス』の社会ネットワーク分析的アプローチ",
     titleOriginal: "Homer's Iliad – A Social Network Analytic Approach",
     originalLang: "英語",
@@ -187,6 +198,7 @@ var STUDIES = [
   },
   {
     id: "study-12",
+    year: 2022,
     titleJa: "キーウ・ブィリーナ叙事詩群のネットワーク分析——東スラヴ叙事詩",
     titleOriginal: "Network analysis of the Kyiv bylyny cycle -- east Slavic epic narratives",
     originalLang: "英語",
@@ -203,6 +215,7 @@ var STUDIES = [
   },
   {
     id: "study-13",
+    year: 2024,
     titleJa: "アイルランド・サガにおける超自然的存在の役割と欠損データの影響の定量化",
     titleOriginal:
       "Quantifying the role of supernatural entities and the effect of missing data in Irish sagas",
@@ -220,6 +233,7 @@ var STUDIES = [
   },
   {
     id: "study-14",
+    year: 2024,
     titleJa: "神話における女性表象の定量分析",
     titleOriginal: "Female representation across mythologies",
     originalLang: "英語",
@@ -236,6 +250,7 @@ var STUDIES = [
   },
   {
     id: "study-15",
+    year: 2019,
     titleJa: "説話に埋め込まれた民俗動物学的知識の体系的定量分析",
     titleOriginal:
       "Systematic quantitative analyses reveal the folk-zoological knowledge embedded in folktales",
@@ -253,6 +268,7 @@ var STUDIES = [
   },
   {
     id: "study-16",
+    year: 2020,
     titleJa: "日本の民俗学データベースの定量分析：統計的概観",
     titleOriginal: "Quantitative Analysis of a Japanese Folkloristic Database: A Statistical Overview",
     originalLang: "日本語",
@@ -269,6 +285,7 @@ var STUDIES = [
   },
   {
     id: "study-17",
+    year: 2024,
     titleJa: "トリックスター動物の生物地理学的分布",
     titleOriginal: "Biogeographical distributions of trickster animals",
     originalLang: "英語",
@@ -285,6 +302,7 @@ var STUDIES = [
   },
   {
     id: "study-18",
+    year: 2019,
     titleJa: "説話の文化的定着は言語表現に刻まれる",
     titleOriginal: "Cultural entrenchment of folktales is encoded in language",
     originalLang: "英語",
@@ -301,6 +319,7 @@ var STUDIES = [
   },
   {
     id: "study-19",
+    year: 2018,
     titleJa: "伝説の生成モデルに向けて：ピザ、橋、ワクチン、魔女",
     titleOriginal: "Toward a Generative Model of Legend: Pizzas, Bridges, Vaccines, and Witches",
     originalLang: "英語",
@@ -317,6 +336,7 @@ var STUDIES = [
   },
   {
     id: "study-20",
+    year: 2010,
     titleJa: "噂伝播モデル：平衡状態の研究",
     titleOriginal: "Rumor Propagation Model: An Equilibrium Study",
     originalLang: "英語",
@@ -333,6 +353,7 @@ var STUDIES = [
   },
   {
     id: "study-21",
+    year: 2018,
     titleJa: "エージェントベースモデルによる宗教性と存在論的安全性の変化予測",
     titleOriginal: "Forecasting Changes in Religiosity and Existential Security with an Agent-Based Model",
     originalLang: "英語",
@@ -349,6 +370,7 @@ var STUDIES = [
   },
   {
     id: "study-22",
+    year: 2012,
     titleJa:
       "社会科学における理論構築へのシミュレーションの役割：宗教性の分岐様式に関する事例研究",
     titleOriginal:
@@ -366,6 +388,7 @@ var STUDIES = [
   },
   {
     id: "study-23",
+    year: 2023,
     titleJa: "「女性の伝統」か？チャイルド・バラッドにおけるジェンダー差の定量化",
     titleOriginal: "A woman's tradition? Quantifying gender difference in the Child ballads",
     originalLang: "英語",
@@ -382,6 +405,7 @@ var STUDIES = [
   },
   {
     id: "study-24",
+    year: 2022,
     titleJa: "民謡旋律の配列アラインメントが示す音楽進化の異文化間規則性",
     titleOriginal:
       "Sequence alignment of folk song melodies reveals cross-cultural regularities of musical evolution",
@@ -399,6 +423,7 @@ var STUDIES = [
   },
   {
     id: "study-25",
+    year: 2022,
     titleJa: "橋の下のトロールを見つける：モチーフ検出器に関する予備的研究",
     titleOriginal: "Finding Trolls Under Bridges: Preliminary Work on a Motif Detector",
     originalLang: "英語",
@@ -415,6 +440,7 @@ var STUDIES = [
   },
   {
     id: "study-26",
+    year: 2021,
     titleJa: "社会ネットワーク分析における意味的価値の概念：比較神話学への応用",
     titleOriginal:
       "The Concept of Semantic Value in Social Network Analysis: an Application to Comparative Mythology",
@@ -432,6 +458,7 @@ var STUDIES = [
   },
   {
     id: "study-27",
+    year: 2022,
     titleJa: "謎めいたフラーホと彼の名を冠した物語：初期アイルランド英雄物語のネットワーク分析",
     titleOriginal:
       "The Enigmatic Fráoch and His Eponymous Tale — Network Analysis of an Early Irish Heroic Romance",
@@ -448,6 +475,7 @@ var STUDIES = [
   },
   {
     id: "study-28",
+    year: 2016,
     titleJa: "民話モチーフの分布データから見る新大陸への人類移住",
     titleOriginal: "Peopling of the New World from Data on Distributions of Folklore Motifs",
     originalLang: "英語",
@@ -464,6 +492,7 @@ var STUDIES = [
   },
   {
     id: "study-29",
+    year: 2023,
     titleJa: "シンデレラの身体：ジェンダー・身体性・説話プロットへの定量的アプローチ",
     titleOriginal: "Cinderella's Body. A Quantitative Approach to Gender, Embodiment, and Folktale Plots",
     originalLang: "英語",
@@ -480,6 +509,7 @@ var STUDIES = [
   },
   {
     id: "study-30",
+    year: 2013,
     titleJa: "ポリュペモス（Aa.Th.1137）：先史時代説話の系統学的再構築",
     titleOriginal: "Polyphemus (Aa. Th. 1137): A phylogenetic reconstruction of a prehistoric tale",
     originalLang: "フランス語（英語要旨あり）",

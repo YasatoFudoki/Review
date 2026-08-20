@@ -4,30 +4,36 @@
    =========================================================== */
 
 :root {
-  --indigo-900: #0f2138;
-  --indigo-800: #16324f;
-  --indigo-700: #1e4266;
-  --indigo-600: #2b567f;
-  --indigo-400: #4c7aa8;
-  --indigo-300: #7ea0c4;
+  /* 藍色 (softened, slightly muted so it reads calm rather than navy-harsh) */
+  --indigo-900: #1a2c42;
+  --indigo-800: #223a56;
+  --indigo-700: #2c4c6e;
+  --indigo-600: #3f6289;
+  --indigo-400: #6f93b7;
+  --indigo-300: #a8c2dd;
 
-  --orange-500: #e8792e;
-  --orange-400: #f0954f;
-  --orange-300: #f5b57e;
+  /* オレンジ (softened toward a warm terracotta rather than a neon orange) */
+  --orange-600: #c06b39;
+  --orange-500: #d97e46;
+  --orange-400: #e2985f;
+  --orange-300: #edb98c;
 
-  --black-900: #0a0a0b;
-  --black-800: #131315;
-  --black-700: #1b1c1f;
+  /* 黒 (lifted slightly off true black for a gentler dark theme) */
+  --black-900: #16181c;
+  --black-800: #1d2024;
+  --black-700: #24272c;
 
-  --gray-700: #2c2d31;
-  --gray-600: #3d3e43;
-  --gray-500: #5a5c63;
-  --gray-400: #85878e;
-  --gray-300: #aeb0b6;
-  --gray-200: #cfd0d4;
+  /* グレー (softened, slightly warmer neutrals) */
+  --gray-700: #2f333a;
+  --gray-600: #3d424a;
+  --gray-500: #595e66;
+  --gray-400: #868b93;
+  --gray-300: #aeb3ba;
+  --gray-200: #d3d6da;
 
+  /* 白 (warm off-white, easier on the eyes than pure white) */
   --white-100: #ffffff;
-  --white-200: #f4f4f5;
+  --white-200: #f2f1ee;
 
   --bg: var(--black-900);
   --bg-elevated: var(--black-800);
@@ -43,6 +49,7 @@
   --accent: var(--indigo-400);
   --accent-strong: var(--indigo-300);
   --accent-orange: var(--orange-500);
+  --accent-orange-hover: var(--orange-600);
 
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -115,7 +122,7 @@ a {
 
 .title-sub {
   font-size: 0.7rem;
-  color: var(--accent-orange);
+  color: var(--accent-strong);
   letter-spacing: 0.05em;
 }
 
@@ -247,10 +254,10 @@ a {
   margin: 0 0 12px;
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--gray-300);
+  color: var(--accent-strong);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  border-left: 3px solid var(--accent-orange);
+  border-left: 3px solid var(--indigo-600);
   padding-left: 8px;
 }
 
@@ -450,8 +457,14 @@ a {
   white-space: nowrap;
 }
 
+.badge-year {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--gray-500);
+  color: var(--gray-300);
+}
+
 .badge-subject {
-  background: rgba(30, 66, 102, 0.35);
+  background: rgba(44, 76, 110, 0.35);
   border-color: var(--indigo-600);
   color: var(--indigo-300);
 }
@@ -514,10 +527,10 @@ a {
   align-items: center;
   gap: 6px;
   background: transparent;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(217, 126, 70, 0.45);
   border-radius: 999px;
   padding: 6px 12px;
-  color: var(--text-secondary);
+  color: var(--orange-300);
   font-family: inherit;
   font-size: 0.8rem;
   cursor: pointer;
@@ -526,16 +539,18 @@ a {
 
 .like-btn:hover {
   border-color: var(--accent-orange);
+  background: rgba(217, 126, 70, 0.08);
 }
 
 .like-btn.liked {
-  background: rgba(232, 121, 46, 0.15);
+  background: rgba(217, 126, 70, 0.18);
   border-color: var(--accent-orange);
   color: var(--orange-300);
 }
 
 .like-icon {
   font-size: 0.9rem;
+  color: var(--accent-orange);
 }
 
 .comment-count {
@@ -637,7 +652,7 @@ a {
   display: block;
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--accent-orange);
+  color: var(--accent-strong);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 6px;
@@ -753,8 +768,8 @@ a {
 
 .comment-submit {
   flex-shrink: 0;
-  background: var(--indigo-700);
-  border: 1px solid var(--accent);
+  background: var(--accent-orange);
+  border: 1px solid var(--accent-orange);
   color: var(--white-100);
   font-family: inherit;
   font-size: 0.82rem;
@@ -765,7 +780,8 @@ a {
 }
 
 .comment-submit:hover {
-  background: var(--indigo-600);
+  background: var(--accent-orange-hover);
+  border-color: var(--accent-orange-hover);
 }
 
 .comment-delete {
