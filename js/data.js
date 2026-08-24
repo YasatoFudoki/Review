@@ -1,6 +1,10 @@
 /* ===========================================================
-   民俗学×数理モデル 既存研究データ (30件)
+   民俗学×数理モデル 既存研究データ (48件)
    すべて実在の学術論文を対象に、DOI/URLとともに整理。
+   study-01〜30: 説話・神話・都市伝説・妖怪・儀礼・民謡
+   study-31〜48: 歴史人口学・方言地理・親族構造・地名・
+                 寺院分布・相互扶助組織など、民俗学/郷土史の
+                 より広い対象領域
    =========================================================== */
 
 var STUDIES = [
@@ -583,5 +587,354 @@ var STUDIES = [
     url: "https://hal.science/hal-00826004",
     subjectCategory: "神話",
     modelCategory: "系統樹・系統ネットワーク分析",
+  },
+  {
+    id: "study-31",
+    year: 1991,
+    titleJa: "中部日本における二世紀にわたる死亡率変化 ―ある寺院の死亡台帳からの証拠―",
+    titleOriginal: "Two Centuries of Mortality Change in Central Japan: The Evidence from a Temple Death Register",
+    originalLang: "英語",
+    authors: "Samuel H. Preston, Ann Bowman Jannetta",
+    summary:
+      "岐阜県飛騨地方の浄土真宗寺院に残る過去帳(死亡台帳)を用い、1771年から1852年にかけての約8万件の死亡記録から乳幼児死亡率・年齢別死亡率の長期変動を復元し、天然痘など感染症が死亡構造に与えた影響を分析した研究。",
+    mathModelSummary:
+      "死亡台帳の記録を年齢・死因別に集計し、生命表(life table)およびモデル生命表との比較によって年齢別死亡率曲線を推定する人口統計学的手法を用いた。",
+    conclusion:
+      "天然痘は10歳未満死亡の最大の死因であり、種痘導入以前の江戸後期日本における乳幼児死亡率の高さと年次変動の大きさを定量的に明らかにした。",
+    futureIssues:
+      "単一寺院データに基づくため他地域との比較可能性や、出生・死亡登録の脱漏の程度をより精緻に補正する必要がある。",
+    url: "https://www.tandfonline.com/doi/abs/10.1080/0032472031000148936",
+    subjectCategory: "歴史疫学",
+    modelCategory: "人口統計モデル(生命表分析)",
+  },
+  {
+    id: "study-32",
+    year: 2005,
+    titleJa: "人口と世帯の動態 ―会津山間部の宗門改帳にみる北日本の一山村地域、1750-1850年―",
+    titleOriginal:
+      "Population and households dynamics: A mountainous district in northern Japan in the Shûmon Aratame Chô of Aizu, 1750–1850",
+    originalLang: "英語",
+    authors: "Akira Hayami, Aoi Okada",
+    summary:
+      "福島県会津地方の山間4カ村の宗門改帳(1750-1850年)を家族復元法により個人・世帯単位で接続し、隔絶された山村における人口停滞の実態と直系家族(stem family)世帯構造との関係を分析した。",
+    mathModelSummary:
+      "家族復元法(family reconstitution)により個人の生残・婚姻・出産履歴を再構成し、コーホート別の人口動態指標を算出する歴史人口学的統計手法を用いた。",
+    conclusion:
+      "山間部では平地に比べ人口増加が停滞し、直系家族世帯が最も卓越した世帯類型であることを示し、地理的隔絶が人口動態と世帯構造の双方に影響することを明らかにした。",
+    futureIssues:
+      "対象4カ村の結果を他の地形条件の地域と比較し、山村特有の人口停滞要因をより体系的に検証する必要がある。",
+    url: "https://www.sciencedirect.com/science/article/abs/pii/S1081602X05000357",
+    subjectCategory: "歴史人口学",
+    modelCategory: "人口統計モデル(家族復元法)",
+  },
+  {
+    id: "study-33",
+    year: 2008,
+    titleJa: "日本歴史人口学の空白を埋める ―19世紀農村日本における婚姻・出生力・世帯―",
+    titleOriginal:
+      "Filling Gaps in Japanese Historical Demography: Marriage, Fertility, and Households in Nineteenth-Century Rural Japan",
+    originalLang: "英語",
+    authors: "Satomi Kurosu",
+    summary:
+      "東北地方の宗門改帳データを用い、19世紀農村日本における結婚年齢・婚姻率・出生力の地域差を推定し、それらが世帯構造(直系家族制)や地域経済発展の水準とどのように関連するかを検討した研究。",
+    mathModelSummary:
+      "宗門改帳から復元したコーホート生命表・婚姻表を用い、有配偶出生率や婚姻タイミングを年齢別に算出する歴史人口学的統計モデルを適用した。",
+    conclusion:
+      "出生力・婚姻パターンには地域による顕著な差があり、世帯の相続制度の厳格さや地域の経済発展度がその差を規定する主要因であることを示した。",
+    futureIssues:
+      "対象地域が東北の限られた村落に偏っているため、西日本など異なる相続慣行を持つ地域データとの体系的比較が今後の課題である。",
+    url: "https://kci.go.kr/kciportal/landing/article.kci?arti_id=ART002054789",
+    subjectCategory: "歴史人口学",
+    modelCategory: "人口統計モデル(コーホート生命表・婚姻表)",
+  },
+  {
+    id: "study-34",
+    year: 2025,
+    titleJa: "近世日本における経済的困窮と移動 ―人別改帳による農村・都市比較の実証研究―",
+    titleOriginal:
+      "Economic stress and migration in early modern Japan: Rural-urban comparative evidence from population registers",
+    originalLang: "英語",
+    authors: "Satomi Kurosu, Hao Dong",
+    summary:
+      "東北地方の3農村と1都市の人別改帳(1708-1870年)から個人単位のパネルデータを構築し、飢饉や米価変動などの経済的ショックが奉公移動や欠落(失踪)といった人口移動行動に与える影響を検証した研究。",
+    mathModelSummary:
+      "個人の年次パネルデータにイベントヒストリー分析(離散時間ハザードモデル)を適用し、米価や飢饉ダミー変数を説明変数として移動確率への効果を推定した。",
+    conclusion:
+      "経済的困窮期には正規の奉公移動は減少する一方で欠落が増加し、農村住民は飢饉に、都市住民は米価変動により敏感に反応するという非対称な脆弱性が明らかになった。",
+    futureIssues:
+      "対象が東北地方の限定的な地域に留まるため、他地域や身分階層による移動行動の差異を広域データで検証することが今後の課題である。",
+    url: "https://www.sciencedirect.com/science/article/abs/pii/S0014498325000142",
+    subjectCategory: "村落構造・人口移動",
+    modelCategory: "統計モデル(イベントヒストリー分析)",
+  },
+  {
+    id: "study-35",
+    year: 1998,
+    titleJa: "二種類の直系家族制か ―伝統的日本とヨーロッパの比較―",
+    titleOriginal: "Two kinds of stem-family system? Traditional Japan and Europe compared",
+    originalLang: "英語",
+    authors: "Osamu Saito",
+    summary:
+      "近世日本(諏訪・会津等)とヨーロッパ(ピレネー地方等)の歴史人口学データを比較し、いずれも一子相続を特徴とする「直系家族制」でありながら相続タイミングや世帯内労働配分の点で異なる下位類型が存在することを論じた研究。",
+    mathModelSummary:
+      "宗門改帳等から復元した世帯構成・相続年齢の分布を集計し、地域間で世帯類型別頻度やライフサイクルステージを比較する歴史人口学的な記述統計・比較分析を用いた。",
+    conclusion:
+      "日欧の直系家族制は表面的な類似にもかかわらず、相続の時期(生前相続か死後相続か)や非相続子の処遇において本質的に異なる二つの下位類型に分かれることを示した。",
+    futureIssues:
+      "比較対象地域数が限られており、より多様な地域の家族類型データを収集して類型論を精緻化することが課題として残る。",
+    url: "https://www.cambridge.org/core/journals/continuity-and-change/article/abs/two-kinds-of-stemfamily-system-traditional-japan-and-europe-compared/DB44D679B8304ADDBE28678A10EC42D2",
+    subjectCategory: "村落構造・家族構造",
+    modelCategory: "比較歴史人口学(記述統計モデル)",
+  },
+  {
+    id: "study-36",
+    year: 2020,
+    titleJa: "中心集団から拡散する方言語彙の空間パターンの定量化",
+    titleOriginal: "Quantifying the spatial pattern of dialect words spreading from a central population",
+    originalLang: "英語",
+    authors: "Takuya Takahashi, Yasuo Ihara",
+    summary:
+      "柳田國男の方言周圏論が示唆する「文化的中心地から周辺への語彙拡散」という現象を、人口ネットワーク上の言語拡散モデルとして定式化し、理想化ネットワークと日本の都道府県間移動を反映した現実的ネットワークの双方で語の年代分布を導出した研究。",
+    mathModelSummary:
+      "個体群動態モデルに基づく言語伝達モデル(中心集団で新語が繰り返し生成され隣接集団へ確率的に伝播する拡散過程)を、グラフ上のマルコフ過程として定式化し解析的・数値的に解いた。",
+    conclusion:
+      "中心地(京都)で新語が繰り返し生まれ周辺へ拡散するというメカニズムだけで、方言周圏論が予測する同心円状の語彙分布パターンを定量的に再現できることを示した。",
+    futureIssues:
+      "モデルは語の生成・伝播の均質性を仮定しており、交通網の発達や都市化による伝播速度の変化を組み込んだ拡張が今後の課題である。",
+    url: "https://royalsocietypublishing.org/doi/10.1098/rsif.2020.0335",
+    subjectCategory: "方言・言語地理",
+    modelCategory: "個体群ネットワーク上の言語拡散モデル",
+  },
+  {
+    id: "study-37",
+    year: 2017,
+    titleJa: "人類方言の空間的進化",
+    titleOriginal: "Spatial evolution of human dialects",
+    originalLang: "英語",
+    authors: "James Burridge",
+    summary:
+      "方言境界の形成過程を、人口密度の変動や海岸線などの地理的境界の影響を受けながら「表面張力」的に安定化する物理モデルとして定式化し、方言連続体・等語線の束化・都市からの波状拡散といった言語地理学的観察を再現した研究。",
+    mathModelSummary:
+      "統計物理学の界面ダイナミクス(表面張力によるドメイン境界の長さ最小化)を応用した確率的セル空間モデルを構築し、モンテカルロシミュレーションにより方言境界の時間発展を解析した。",
+    conclusion:
+      "方言地域の境界は人口密度勾配と地形的制約に規定される表面張力的効果によって少数の安定配置へ収束する傾向があり、複雑な初期条件によらず予測可能なパターンが生じることを示した。",
+    futureIssues:
+      "モデルは語彙的特徴の伝播のみを扱っており、文法・音韻変化など異なる言語変化のタイプへの適用可能性の検証が今後の課題である。",
+    url: "https://link.aps.org/doi/10.1103/PhysRevX.7.031008",
+    subjectCategory: "方言・言語地理",
+    modelCategory: "統計物理モデル(表面張力・界面ダイナミクス)",
+  },
+  {
+    id: "study-38",
+    year: 2014,
+    titleJa: "方言特徴拡散のコンピュータシミュレーション",
+    titleOriginal: "Computer Simulation of Dialect Feature Diffusion",
+    originalLang: "英語",
+    authors: "William A. Kretzschmar Jr., Ilkka Juuso, C. Thomas Bailey",
+    summary:
+      "アメリカ言語地図(Linguistic Atlas)のデータを対象に、方言特徴が地域間でどのように拡大・縮小するかをセルオートマトンで再現し、実際の方言分布パターンとの整合性を検証した研究。",
+    mathModelSummary:
+      "格子状に配置した地点(セル)ごとに近隣セルの言語特徴の状態を参照して更新規則を適用する2種類のセルオートマトンモデルを独立に構築し、多数回の反復計算によって地域的分布パターンの創発を観察した。",
+    conclusion:
+      "単純な近隣参照の更新規則の反復から、言語地図データに見られるような方言特徴の地域的な拡大・縮小パターンが再現可能であることを示し、方言変化を複雑適応系として捉える妥当性を裏付けた。",
+    futureIssues:
+      "モデルの更新規則は簡略化されており、話者間の社会的威信や移動パターンなど社会言語学的要因を組み込んだより現実的なモデル化が今後の課題である。",
+    url: "https://www.cambridge.org/core/journals/journal-of-linguistic-geography/article/abs/computer-simulation-of-dialect-feature-diffusion/5FC8D58C781597E1FAB72F2413EE1AAE",
+    subjectCategory: "方言・言語地理",
+    modelCategory: "セルオートマトンモデル",
+  },
+  {
+    id: "study-39",
+    year: 2023,
+    titleJa:
+      "アクセント型統合に基づくアクセント体系のベイズ系統解析 ―日本語方言への新手法の適用―",
+    titleOriginal:
+      "Bayesian phylogenetic analysis of pitch-accent systems based on accentual class merger: a new method applied to Japanese dialects",
+    originalLang: "英語",
+    authors: "Takuya Takahashi, Ayaka Onohara, Yasuo Ihara",
+    summary:
+      "日本語諸方言におけるアクセント型の統合(合流)パターンをデータとして用い、方言間の系統関係を推定する新たなベイズ系統樹推定手法を提案し、これを実際の日本語方言アクセント体系に適用した研究。",
+    mathModelSummary:
+      "アクセント型の合流を離散的な系統学的形質とみなし、ベイズ統計に基づく系統樹推定(MCMCによる事後分布推定)を用いて方言間の分岐関係と分岐年代を推定するモデルを構築した。",
+    conclusion:
+      "アクセント合流パターンに基づく系統樹は、従来の語彙比較に基づく方言分類とおおむね整合しつつも一部で異なる系統関係を示唆し、アクセント体系が方言系統推定の有用な情報源となることを示した。",
+    futureIssues:
+      "系統樹モデルは方言間の空間的接触による特徴の水平伝播を十分に考慮できておらず、系統発生と空間拡散を統合したモデルへの拡張が今後の課題である。",
+    url: "https://academic.oup.com/jole/article/8/2/169/7717950",
+    subjectCategory: "方言・言語地理",
+    modelCategory: "ベイズ系統樹推定モデル",
+  },
+  {
+    id: "study-40",
+    year: 2018,
+    titleJa: "Dialectones ―Twitterデータを用いた統計的に有意な方言境界の検出―",
+    titleOriginal: "Dialectones: Finding Statistically Significant Dialectal Boundaries Using Twitter Data",
+    originalLang: "英語",
+    authors: "Carlos A. Rodriguez-Diaz, Sergio Jimenez, George Dueñas, Johnatan Estiven Bonilla, Alexander Gelbukh",
+    summary:
+      "コロンビア国内160地点から収集したスペイン語ツイートのコーパスを用い、生態学の「エコトーン」概念を言語境界に応用した「ダイアレクトーン」概念を提案し、統計的検定によって方言境界を客観的に検出する手法を開発した研究。",
+    mathModelSummary:
+      "単語の出現頻度(ユニグラム特徴)を地点間で比較し、Hilbert-Schmidt独立性基準(HSIC)およびWilcoxon符号順位検定という2種のノンパラメトリック統計検定を用いて方言境界の統計的有意性を判定した。",
+    conclusion:
+      "統計的検定に基づき自動検出された方言境界(ダイアレクトーン)は、従来の方言学者による地域区分と部分的に一致しつつも異なる知見を与え、方言境界検出の客観的な代替手法として有効であることを示した。",
+    futureIssues:
+      "SNSデータの利用者属性の偏り(年齢層・都市部集中等)による代表性の限界があり、より均質なサンプリングやオフラインデータとの統合が今後の課題である。",
+    url: "https://www.cys.cic.ipn.mx/ojs/index.php/CyS/article/view/3104",
+    subjectCategory: "方言・言語地理",
+    modelCategory: "統計的境界検定モデル(HSIC・Wilcoxon検定)",
+  },
+  {
+    id: "study-41",
+    year: 2024,
+    titleJa: "観念の拡散と中欧における大魔女狩り",
+    titleOriginal: "Ideational diffusion and the great witch hunt in Central Europe",
+    originalLang: "英語",
+    authors: "Kerice Doten-Snitker, Steven Pfaff, Yuan Hsiao",
+    summary:
+      "近世中欧における魔女裁判の都市間拡大を、悪魔学書の出版動向・気候・国家統制力・都市間ネットワークのデータと組み合わせて分析し、ある都市での魔女裁判の実施が周辺都市の裁判実施行動に及ぼす社会的影響を検証した研究。",
+    mathModelSummary:
+      "都市を単位とするイベント履歴データに対し、都市間の地理的・宗教的ネットワーク構造を考慮した拡散モデル(空間的相互依存を組み込んだ統計的生存時間分析)を適用し、観念拡散の経路を推定した。",
+    conclusion:
+      "魔女裁判の拡大は独立した地域的発生ではなく、印刷物を介した観念の伝播と近隣都市の動向を模倣する社会的影響過程によって説明されることが明らかになった。",
+    futureIssues:
+      "都市単位の集計データに依拠しており、個々の裁判記録レベルでのより詳細な社会ネットワーク再構成が今後の課題として挙げられる。",
+    url: "https://digitalcommons.chapman.edu/sociology_articles/104/",
+    subjectCategory: "民間信仰・タブー",
+    modelCategory: "空間的拡散モデル(イベント履歴・都市間ネットワーク)",
+  },
+  {
+    id: "study-42",
+    year: 2022,
+    titleJa:
+      "妊娠中の食物禁忌 ―農耕民における出産関連圧力を示唆する異文化間比較メタ分析―",
+    titleOriginal:
+      "Food taboos during pregnancy: meta-analysis on cross cultural differences suggests specific, diet-related pressures on childbirth among agriculturalists",
+    originalLang: "英語",
+    authors: "Ornella Maggiulli, Fabrizio Rufo, Sarah E. Johns, Jonathan C. K. Wells",
+    summary:
+      "世界各地の伝統社会における妊娠中の食物禁忌に関する民族誌データを収集し、生業形態(農耕民か非農耕民か)によって禁忌の対象食品や正当化理由がどのように異なるかを異文化間で統計的に比較した研究。",
+    mathModelSummary:
+      "民族誌横断データベースから抽出した食物禁忌の事例をカテゴリ化し、生業形態等を要因としたカイ二乗検定・フィッシャーの正確検定による異文化間比較メタ分析を行った。",
+    conclusion:
+      "農耕社会の食物禁忌は栽培・加工食品を対象とし出生時体重増加への懸念と関連する傾向が強く、非農耕社会では非家畜化動物を対象とし生理的要因以外の理由づけが多いという体系的な差異が示された。",
+    futureIssues:
+      "民族誌記録の質・量が社会間で不均一であり、禁忌の実際の遵守率や個人差を反映したより精緻なデータ収集が今後の課題である。",
+    url: "https://peerj.com/articles/13633/",
+    subjectCategory: "民間信仰・タブー",
+    modelCategory: "異文化間統計メタ分析(カイ二乗検定等)",
+  },
+  {
+    id: "study-43",
+    year: 1998,
+    titleJa: "スイスの遺伝的構造とアイソニミー(同姓分析) II ―距離による隔離―",
+    titleOriginal: "Isonymy and the genetic structure of Switzerland. II. Isolation by distance",
+    originalLang: "英語",
+    authors: "A. Rodriguez-Larralde, I. Barrai, E. Scapoli, M. Beretta, S. Nesti, E. Mamolini",
+    summary:
+      "スイス各州の電話帳データに基づく姓(苗字)の分布を用い、アイソニミー(同姓率)分析によって州間の遺伝的類縁関係を推定し、山岳地形や言語境界が集団構造に及ぼす影響を検討した研究。",
+    mathModelSummary:
+      "姓の一致頻度からラスカー距離(同姓率の対数の負値)を算出し、地理的距離との回帰関係(距離による隔離)をマレコの指数関数的隔離モデルにより検証した。",
+    conclusion:
+      "州間のアイソニミーは地理的距離の対数と有意な線形関係を示し、山岳による地理的障壁と言語境界がスイス国内の人口集団構造の急激な変化をもたらしていることが明らかになった。",
+    futureIssues:
+      "姓の分布は移住や改姓等の文化的要因にも影響されるため、実際の遺伝マーカーデータとの比較によりアイソニミーの遺伝的妥当性をさらに検証する必要がある。",
+    url: "https://www.tandfonline.com/doi/abs/10.1080/03014469800006772",
+    subjectCategory: "親族・同族構造",
+    modelCategory: "アイソニミー分析(隔離距離モデル)",
+  },
+  {
+    id: "study-44",
+    year: 2024,
+    titleJa: "系譜データを用いたケベック創始者集団の遺伝的構造の解明",
+    titleOriginal: "Deciphering the genetic structure of the Quebec founder population using genealogies",
+    originalLang: "英語",
+    authors: "L. Gagnon, C. Moreau, C. Laprise 他",
+    summary:
+      "17世紀以降のケベック入植者に遡る大規模系譜データベース(BALSAC)を用い、数百万人規模の家系ネットワークを再構成して、地域ごとの創始者効果や移住の履歴が現代ケベック人集団の遺伝的構造に与えた影響を解析した研究。",
+    mathModelSummary:
+      "系譜記録をノードとエッジからなる巨大な親族ネットワークグラフとして表現し、血縁係数や近交係数を計算するグラフ理論的手法および集団遺伝学的シミュレーションを組み合わせた。",
+    conclusion:
+      "ケベック内の地域間で祖先構成や創始者効果の強さに明確な差があることを系譜ネットワーク解析から定量的に示し、歴史的な入植・移住パターンが現代の集団遺伝構造を規定していることを裏付けた。",
+    futureIssues:
+      "系譜データに含まれない移民や記録の欠落した家系の扱いが課題であり、より広い地理的範囲への手法の一般化も今後の検討課題である。",
+    url: "https://www.nature.com/articles/s41431-023-01356-2",
+    subjectCategory: "親族・同族構造",
+    modelCategory: "グラフ理論(系譜ネットワーク解析)",
+  },
+  {
+    id: "study-45",
+    year: 2023,
+    titleJa: "英語地名の言語的起源に関する確率論的分析",
+    titleOriginal: "A Stochastic Analysis of the Linguistic Provenance of English Place Names",
+    originalLang: "英語",
+    authors: "Michael Dalvean",
+    summary:
+      "イングランド各地の地名を対象に、地名の語源(古英語・古ノルド語・ケルト語等)ごとの地理的分布を大規模地名データベースから抽出し、その空間的偏りを確率モデルによって定量的に評価した研究。",
+    mathModelSummary:
+      "地名の言語的起源をカテゴリ変数として扱い、空間的自己相関やクラスタリングの検定を含む確率論的・統計的モデルを用いて地名分布のランダム性からの逸脱を評価した。",
+    conclusion:
+      "地名の言語的起源には統計的に有意な空間的偏りが存在し、その分布パターンが歴史的な民族移動・定住の波(アングロサクソン・ヴァイキング等)の痕跡を反映していることが確認された。",
+    futureIssues:
+      "地名の語源同定自体に不確実性が伴うため、語源判定の信頼区間を明示的にモデルへ組み込む拡張が今後の課題とされる。",
+    url: "https://arxiv.org/abs/2312.12850",
+    subjectCategory: "地名・姓氏",
+    modelCategory: "確率論的空間分析モデル",
+  },
+  {
+    id: "study-46",
+    year: 2018,
+    titleJa: "植物苗字の分類と地域分布に関する統計分析",
+    titleOriginal: "植物苗字の分類と地域分布に関する統計分析",
+    originalLang: "日本語",
+    authors: "塚常健太",
+    summary:
+      "全国の電話帳由来の苗字統計データから上位1万位の苗字を抽出し、漢字辞典に基づき植物に由来する苗字1,154種を分類したうえで、それらの都道府県別分布に見られる地域的偏りとその要因を統計的に分析した研究。",
+    mathModelSummary:
+      "苗字の出現頻度データに対し、地域(都道府県)を上位レベルとするマルチレベル分析(階層線形モデル)を適用し、植生分布などの地理的変数が苗字の地域的偏りに与える影響を評価した。",
+    conclusion:
+      "植物苗字の地域分布には有意な偏りがあり、当該植物の自生・栽培分布(植生分布)が苗字の地域的集中と正の関連を持つことが明らかになった。",
+    futureIssues:
+      "苗字の成立時期や由来の歴史的経緯が個々に異なるため、地名由来との関係など苗字成立過程の歴史的検証をさらに深める必要がある。",
+    url: "https://jglobal.jst.go.jp/detail?JGLOBAL_ID=201902266799508930",
+    subjectCategory: "地名・姓氏",
+    modelCategory: "マルチレベル分析(階層線形モデル)",
+  },
+  {
+    id: "study-47",
+    year: 2025,
+    titleJa: "中国厦門における仏教寺院の歴史的発展と空間分布の解明",
+    titleOriginal: "Tracing the historical development and spatial distribution of Buddhist temples in Xiamen, China",
+    originalLang: "英語",
+    authors: "J. Fu, Q. Li, W. Xie, H. Mao, C. Zhang",
+    summary:
+      "中国厦門市の地方志(地域誌)や考古調査記録に基づき、隋唐時代から明清時代にかけての仏教寺院の建立数と立地の変遷をGISデータベース化し、地形・水系・交通網などの環境要因との関係を定量的に分析した研究。",
+    mathModelSummary:
+      "歴史地理情報システム(HGIS)を用いて寺院の位置データを時代別にマッピングし、モランのI統計量による空間的自己相関分析やカーネル密度推定、GeoDetectorによる要因分析を行った。",
+    conclusion:
+      "寺院数は明清期にピークを迎え分布の中心が南へ移動する傾向を示し、低標高・南向き斜面・交通幹線付近に立地が集中するなど、寺院立地が環境要因と都市化の進展に強く規定されていたことが明らかになった。",
+    futureIssues:
+      "地方志など文献史料に基づく寺院所在地の同定には精度の限界があり、考古学的発掘データとのさらなる照合による位置情報の精緻化が今後の課題である。",
+    url: "https://www.nature.com/articles/s40494-025-01857-x",
+    subjectCategory: "寺院の空間分布",
+    modelCategory: "空間統計モデル(HGIS・空間的自己相関分析)",
+  },
+  {
+    id: "study-48",
+    year: 1993,
+    titleJa: "回転型貯蓄信用講(ROSCA)の経済学",
+    titleOriginal: "The Economics of Rotating Savings and Credit Associations",
+    originalLang: "英語",
+    authors: "Timothy Besley, Stephen Coate, Glenn Loury",
+    summary:
+      "世界各地の民俗社会に見られる「講」型の相互扶助金融組織(回転型貯蓄信用講、ROSCA)を対象に、耐久消費財購入のための貯蓄という文脈で、くじ引き型と入札型という二つの資金配分方式の経済的機能と持続可能性を理論的に分析した研究。",
+    mathModelSummary:
+      "個人が耐久財購入のために貯蓄する動学的最適化モデルを構築し、ランダム配分方式と入札配分方式それぞれについて参加者の期待効用を比較するゲーム理論・厚生経済学的モデルを用いた。",
+    conclusion:
+      "信用市場にアクセスできない個人にとってROSCA参加はどちらの配分方式でも単独貯蓄より厚生を改善するが、選好が同質的な場合はランダム配分方式の方が望ましいことを理論的に示した。",
+    futureIssues:
+      "モデルは参加者の選好の同質性を仮定しており、異質な選好や参加者間の血縁・地縁関係(社会的紐帯)がROSCAの安定性に与える影響のさらなる理論的検討が今後の課題である。",
+    url: "https://ideas.repec.org/a/aea/aecrev/v83y1993i4p792-810.html",
+    subjectCategory: "相互扶助組織",
+    modelCategory: "動学的最適化モデル・ゲーム理論",
   },
 ];
