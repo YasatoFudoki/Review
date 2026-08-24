@@ -669,6 +669,17 @@ a {
   word-break: break-all;
 }
 
+.detail-section-conclusion {
+  background: rgba(63, 98, 137, 0.14);
+  border: 1px solid var(--indigo-600);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+}
+
+.detail-section-conclusion .detail-value {
+  font-weight: 600;
+}
+
 .modal-actions {
   display: flex;
   align-items: center;

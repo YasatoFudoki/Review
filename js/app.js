@@ -241,6 +241,7 @@
       section("著者", escapeHtml(study.authors)) +
       section("研究の概要", escapeHtml(study.summary)) +
       section("用いられた数理モデルの概要", escapeHtml(study.mathModelSummary)) +
+      section("結論", escapeHtml(study.conclusion), "detail-section-conclusion") +
       section("今後の課題", escapeHtml(study.futureIssues)) +
       section("論文のURL", linkify(study.url)) +
 
@@ -280,9 +281,10 @@
     });
   }
 
-  function section(label, valueHtml) {
+  function section(label, valueHtml, modifierClass) {
+    var cls = "detail-section" + (modifierClass ? " " + modifierClass : "");
     return (
-      '<div class="detail-section">' +
+      '<div class="' + cls + '">' +
       '<span class="detail-label">' + escapeHtml(label) + "</span>" +
       '<p class="detail-value">' + valueHtml + "</p>" +
       "</div>"
