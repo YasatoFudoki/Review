@@ -1,38 +1,10 @@
 (function () {
   "use strict";
 
-  var STORAGE_KEY = "folklore-math-review-state-v1";
-
-  /** @type {{likes: Object<string, boolean>, checked: Object<string, boolean>, comments: Object<string, Array<{text:string, time:number}>>}} */
-  var state = loadState();
-
   var activeSubjects = new Set();
   var activeModels = new Set();
   var unreadOnly = false;
   var currentModalId = null;
-
-  function loadState() {
-    try {
-      var raw = localStorage.getItem(STORAGE_KEY);
-      if (!raw) return { likes: {}, checked: {}, comments: {} };
-      var parsed = JSON.parse(raw);
-      return {
-        likes: parsed.likes || {},
-        checked: parsed.checked || {},
-        comments: parsed.comments || {},
-      };
-    } catch (e) {
-      return { likes: {}, checked: {}, comments: {} };
-    }
-  }
-
-  function saveState() {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-    } catch (e) {
-      /* localStorage unavailable; state stays in-memory for this session */
-    }
-  }
 
   function escapeHtml(str) {
     return String(str == null ? "" : str).replace(/[&<>"']/g, function (c) {
@@ -99,7 +71,7 @@
 
   function getFilteredStudies() {
     return STUDIES.filter(function (s) {
-      if (unreadOnly && state.checked[s.id]) return false;
+      if (unreadOnly && Sync.isChecked(s.id)) return false;
       if (activeSubjects.size && !activeSubjects.has(s.subjectCategory)) return false;
       if (activeModels.size && !activeModels.has(s.modelCategory)) return false;
       return true;
@@ -124,9 +96,9 @@
   }
 
   function buildCard(study) {
-    var isChecked = !!state.checked[study.id];
-    var isLiked = !!state.likes[study.id];
-    var commentCount = (state.comments[study.id] || []).length;
+    var isChecked = Sync.isChecked(study.id);
+    var isLiked = Sync.isLiked(study.id);
+    var commentCount = Sync.getComments(study.id).length;
 
     var card = document.createElement("article");
     card.className = "study-card" + (isChecked ? " is-checked" : "");
@@ -150,7 +122,7 @@
       '<div class="card-bottom">' +
       '<button type="button" class="like-btn' + (isLiked ? " liked" : "") + '" data-action="like" data-id="' + study.id + '">' +
       '<span class="like-icon">' + (isLiked ? "♥" : "♡") + "</span>" +
-      '<span class="like-count">' + likeLabel(study, isLiked) + "</span>" +
+      '<span class="like-count">' + likeLabel(study.id, isLiked) + "</span>" +
       "</button>" +
       '<span class="comment-count">💬 ' + commentCount + "</span>" +
       "</div>";
@@ -170,36 +142,37 @@
     var likeBtn = card.querySelector('[data-action="like"]');
     likeBtn.addEventListener("click", function (e) {
       e.stopPropagation();
-      toggleLike(study.id);
+      Sync.toggleLike(study.id);
     });
 
     return card;
   }
 
-  function likeLabel(study, isLiked) {
-    return isLiked ? "いいね済み" : "いいね";
-  }
-
-  function toggleLike(id) {
-    state.likes[id] = !state.likes[id];
-    saveState();
-    renderList();
-    if (currentModalId === id) renderModal(id);
-  }
-
-  function toggleChecked(id) {
-    state.checked[id] = !state.checked[id];
-    saveState();
-    renderList();
-    if (currentModalId === id) renderModal(id);
+  function likeLabel(id, isLiked) {
+    var count = Sync.likeCount(id);
+    var base = isLiked ? "いいね済み" : "いいね";
+    return count > 0 ? base + " (" + count + ")" : base;
   }
 
   function updateStats() {
     var total = STUDIES.length;
-    var checkedCount = STUDIES.filter(function (s) { return state.checked[s.id]; }).length;
+    var checkedCount = STUDIES.filter(function (s) { return Sync.isChecked(s.id); }).length;
     var shown = getFilteredStudies().length;
     document.getElementById("statsText").textContent =
       "全" + total + "件中 " + shown + "件を表示 / 確認済み " + checkedCount + "件";
+  }
+
+  function updateSyncStatus() {
+    var el = document.getElementById("syncStatus");
+    if (!el) return;
+    el.hidden = false;
+    if (Sync.isCloudEnabled()) {
+      el.textContent = "🔗 端末間で共有中";
+      el.className = "sync-status sync-status-on";
+    } else {
+      el.textContent = "💾 この端末のみ";
+      el.className = "sync-status sync-status-off";
+    }
   }
 
   /* ---------------- Modal / detail ---------------- */
@@ -226,9 +199,9 @@
   function renderModal(id) {
     var study = findStudy(id);
     if (!study) return;
-    var isChecked = !!state.checked[study.id];
-    var isLiked = !!state.likes[study.id];
-    var comments = state.comments[study.id] || [];
+    var isChecked = Sync.isChecked(study.id);
+    var isLiked = Sync.isLiked(study.id);
+    var comments = Sync.getComments(study.id);
 
     var body = document.getElementById("modalBody");
     body.innerHTML =
@@ -249,7 +222,7 @@
 
       '<div class="modal-actions">' +
       '<button type="button" class="like-btn' + (isLiked ? " liked" : "") + '" data-action="modal-like">' +
-      '<span class="like-icon">' + (isLiked ? "♥" : "♡") + "</span><span>" + likeLabel(study, isLiked) + "</span>" +
+      '<span class="like-icon">' + (isLiked ? "♥" : "♡") + "</span><span>" + likeLabel(study.id, isLiked) + "</span>" +
       "</button>" +
       '<button type="button" class="check-toggle' + (isChecked ? " checked" : "") + '" data-action="modal-check">' +
       (isChecked ? "✓ 確認済み" : "未確認 (クリックで確認済みにする)") +
@@ -268,17 +241,17 @@
     renderCommentList(study.id);
 
     body.querySelector('[data-action="modal-like"]').addEventListener("click", function () {
-      toggleLike(study.id);
+      Sync.toggleLike(study.id);
     });
     body.querySelector('[data-action="modal-check"]').addEventListener("click", function () {
-      toggleChecked(study.id);
+      Sync.toggleChecked(study.id);
     });
     body.querySelector("#commentForm").addEventListener("submit", function (e) {
       e.preventDefault();
       var input = document.getElementById("commentInput");
       var text = input.value.trim();
       if (!text) return;
-      addComment(study.id, text);
+      Sync.addComment(study.id, text);
       input.value = "";
     });
   }
@@ -293,7 +266,7 @@
   }
 
   function renderCommentList(id) {
-    var comments = state.comments[id] || [];
+    var comments = Sync.getComments(id);
     var listEl = document.getElementById("commentList");
     if (!listEl) return;
     listEl.innerHTML = "";
@@ -304,39 +277,25 @@
       listEl.appendChild(empty);
       return;
     }
-    comments.forEach(function (comment, index) {
+    comments.forEach(function (comment) {
       var li = document.createElement("li");
       li.className = "comment-item";
       var date = new Date(comment.time);
+      var canDelete = Sync.canDeleteComment(comment);
       li.innerHTML =
         '<div class="comment-item-head">' +
         '<span class="comment-time">' + date.toLocaleString("ja-JP") + "</span>" +
-        '<button type="button" class="comment-delete" data-index="' + index + '">削除</button>' +
+        (canDelete ? '<button type="button" class="comment-delete">削除</button>' : "") +
         "</div>" +
         '<p class="comment-text"></p>';
       li.querySelector(".comment-text").textContent = comment.text;
-      li.querySelector(".comment-delete").addEventListener("click", function () {
-        state.comments[id].splice(index, 1);
-        saveState();
-        renderCommentList(id);
-        renderList();
-        var body = document.getElementById("modalBody");
-        var label = body.querySelector(".comment-section .detail-label");
-        if (label) label.textContent = "コメント (" + state.comments[id].length + ")";
-      });
+      if (canDelete) {
+        li.querySelector(".comment-delete").addEventListener("click", function () {
+          Sync.deleteComment(id, comment.id);
+        });
+      }
       listEl.appendChild(li);
     });
-  }
-
-  function addComment(id, text) {
-    if (!state.comments[id]) state.comments[id] = [];
-    state.comments[id].push({ text: text, time: Date.now() });
-    saveState();
-    renderCommentList(id);
-    renderList();
-    var body = document.getElementById("modalBody");
-    var label = body.querySelector(".comment-section .detail-label");
-    if (label) label.textContent = "コメント (" + state.comments[id].length + ")";
   }
 
   /* ---------------- Filter panel open/close (mobile drawer) ---------------- */
@@ -355,6 +314,14 @@
   function init() {
     buildFilterChips();
     renderList();
+    updateSyncStatus();
+
+    Sync.onChange(function () {
+      renderList();
+      if (currentModalId) renderModal(currentModalId);
+      updateSyncStatus();
+    });
+    Sync.init();
 
     document.getElementById("unreadOnly").addEventListener("change", function (e) {
       unreadOnly = e.target.checked;
