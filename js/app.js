@@ -103,6 +103,8 @@
       if (activeSubjects.size && !activeSubjects.has(s.subjectCategory)) return false;
       if (activeModels.size && !activeModels.has(s.modelCategory)) return false;
       return true;
+    }).sort(function (a, b) {
+      return a.year - b.year;
     });
   }
 
@@ -241,7 +243,7 @@
       section("著者", escapeHtml(study.authors)) +
       section("研究の概要", escapeHtml(study.summary)) +
       section("用いられた数理モデルの概要", escapeHtml(study.mathModelSummary)) +
-      section("結論", escapeHtml(study.conclusion), "detail-section-conclusion") +
+      section("結論", escapeHtml(study.conclusion)) +
       section("今後の課題", escapeHtml(study.futureIssues)) +
       section("論文のURL", linkify(study.url)) +
 
@@ -281,10 +283,9 @@
     });
   }
 
-  function section(label, valueHtml, modifierClass) {
-    var cls = "detail-section" + (modifierClass ? " " + modifierClass : "");
+  function section(label, valueHtml) {
     return (
-      '<div class="' + cls + '">' +
+      '<div class="detail-section">' +
       '<span class="detail-label">' + escapeHtml(label) + "</span>" +
       '<p class="detail-value">' + valueHtml + "</p>" +
       "</div>"

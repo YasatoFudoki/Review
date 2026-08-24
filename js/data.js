@@ -64,7 +64,7 @@ var STUDIES = [
       "より多様な説話類型やより精緻な民族言語境界データを用いた検証が今後の課題として挙げられている。",
     url: "https://royalsocietypublishing.org/doi/10.1098/rspb.2012.3065",
     subjectCategory: "説話・昔話",
-    modelCategory: "集団遺伝学的統計モデル(FST分析)",
+    modelCategory: "統計モデル",
   },
   {
     id: "study-04",
@@ -143,7 +143,7 @@ var STUDIES = [
     futureIssues:
       "対象データの地理的偏りや、形質コード化における恣意性の低減が今後の課題として指摘されている。",
     url: "https://shs.hal.science/halshs-00932197/document",
-    subjectCategory: "神話",
+    subjectCategory: "神話・叙事詩",
     modelCategory: "系統樹・系統ネットワーク分析",
   },
   {
@@ -162,7 +162,7 @@ var STUDIES = [
     futureIssues:
       "大規模データベースゆえの記録バイアス（調査密度の地域差）の補正や、水平伝播モデルとの統合が今後の課題とされている。",
     url: "https://kirj.ee/public/trames_pdf/2018/issue_4/Trames-2018-4-407-424.pdf",
-    subjectCategory: "神話",
+    subjectCategory: "神話・叙事詩",
     modelCategory: "系統樹・系統ネットワーク分析",
   },
   {
@@ -181,7 +181,7 @@ var STUDIES = [
     futureIssues:
       "より多くの叙事詩・異なる文化圏の物語への適用拡大が、実社会性の判定基準を精緻化する上での今後の課題とされている。",
     url: "https://arxiv.org/abs/1205.4324",
-    subjectCategory: "神話",
+    subjectCategory: "神話・叙事詩",
     modelCategory: "ネットワーク科学",
   },
   {
@@ -200,7 +200,7 @@ var STUDIES = [
     futureIssues:
       "サガの史実性が不確かであるため、記録バイアスの影響評価やより精緻な相互作用の定義が今後の課題として指摘されている。",
     url: "https://link.springer.com/article/10.1140/epjb/e2013-40583-3",
-    subjectCategory: "神話",
+    subjectCategory: "神話・叙事詩",
     modelCategory: "ネットワーク科学",
   },
   {
@@ -219,7 +219,7 @@ var STUDIES = [
     futureIssues:
       "他の古典叙事詩との比較分析や、相互作用の重み付け方法の改良が今後の課題として挙げられている。",
     url: "https://doi.org/10.3366/ijhac.2015.0141",
-    subjectCategory: "神話",
+    subjectCategory: "神話・叙事詩",
     modelCategory: "ネットワーク科学",
   },
   {
@@ -238,7 +238,7 @@ var STUDIES = [
     futureIssues:
       "写本間の異同や欠落データの影響評価、他文化圏の叙事詩とのさらなる比較が今後の課題とされている。",
     url: "https://arxiv.org/abs/2203.10399",
-    subjectCategory: "神話",
+    subjectCategory: "神話・叙事詩",
     modelCategory: "ネットワーク科学",
   },
   {
@@ -258,7 +258,7 @@ var STUDIES = [
     futureIssues:
       "欠損データの体系的バイアスをより正確にモデル化する手法の開発が今後の課題として言及されている。",
     url: "https://arxiv.org/abs/2409.12071",
-    subjectCategory: "神話",
+    subjectCategory: "神話・叙事詩",
     modelCategory: "ネットワーク科学",
   },
   {
@@ -277,7 +277,7 @@ var STUDIES = [
     futureIssues:
       "サンプルとなる物語の選定バイアスや、時代・文化背景による女性表象の変遷の追跡が今後の課題として挙げられている。",
     url: "https://cmpj2.icmp.lviv.ua/index.php/cmpj/article/view/86",
-    subjectCategory: "神話",
+    subjectCategory: "神話・叙事詩",
     modelCategory: "ネットワーク科学",
   },
   {
@@ -298,7 +298,7 @@ var STUDIES = [
       "対象データの文化的偏り（西洋中心的なデータセット）の是正や、より多様な地域の説話への拡張が今後の課題とされている。",
     url: "https://www.nature.com/articles/s41599-019-0375-x",
     subjectCategory: "説話・昔話",
-    modelCategory: "統計モデル(一般化線形混合モデル)",
+    modelCategory: "統計モデル",
   },
   {
     id: "study-16",
@@ -316,8 +316,8 @@ var STUDIES = [
     futureIssues:
       "データベースの記録密度の地域差（調査バイアス）の補正や、テキストマイニングを用いたより詳細な内容分析が今後の課題として挙げられている。",
     url: "https://cir.nii.ac.jp/crid/1050011097133849984",
-    subjectCategory: "妖怪・怪異",
-    modelCategory: "統計的分布分析・クラスター分析",
+    subjectCategory: "信仰・儀礼・怪異",
+    modelCategory: "統計モデル",
   },
   {
     id: "study-17",
@@ -336,7 +336,7 @@ var STUDIES = [
       "気候以外の社会文化的要因（交易・移住等）の影響を組み込んだモデルの拡張が今後の課題として言及されている。",
     url: "https://royalsocietypublishing.org/doi/10.1098/rsos.231577",
     subjectCategory: "説話・昔話",
-    modelCategory: "統計モデル(一般化線形モデル)",
+    modelCategory: "統計モデル",
   },
   {
     id: "study-18",
@@ -355,7 +355,7 @@ var STUDIES = [
       "英語以外の言語・他の説話類型への適用や、口承伝承における同様の「定着」効果の検証が今後の課題として挙げられている。",
     url: "https://www.nature.com/articles/s41599-019-0234-9",
     subjectCategory: "説話・昔話",
-    modelCategory: "統計モデル(回帰分析)",
+    modelCategory: "統計モデル",
   },
   {
     id: "study-19",
@@ -373,8 +373,8 @@ var STUDIES = [
     futureIssues:
       "モデルの定量的検証（実データへの当てはめ）や、他の言語圏・ジャンルへの一般化が今後の課題として言及されている。",
     url: "https://doi.org/10.3390/h7010001",
-    subjectCategory: "都市伝説・噂",
-    modelCategory: "生成モデル（疫学的アナロジー）",
+    subjectCategory: "信仰・儀礼・怪異",
+    modelCategory: "伝播・拡散モデル",
   },
   {
     id: "study-20",
@@ -392,8 +392,8 @@ var STUDIES = [
     futureIssues:
       "ネットワーク構造（非均質な接触パターン）を組み込んだ拡張モデルの構築が今後の課題として指摘されている。",
     url: "https://doi.org/10.1155/2010/631357",
-    subjectCategory: "都市伝説・噂",
-    modelCategory: "疫学モデル(SIR等)",
+    subjectCategory: "信仰・儀礼・怪異",
+    modelCategory: "伝播・拡散モデル",
   },
   {
     id: "study-21",
@@ -411,7 +411,7 @@ var STUDIES = [
     futureIssues:
       "モデルパラメータの実証的較正の精度向上と、異なる宗教的文脈への一般化可能性の検証が今後の課題とされている。",
     url: "https://www.jasss.org/21/1/4.html",
-    subjectCategory: "儀礼・信仰",
+    subjectCategory: "信仰・儀礼・怪異",
     modelCategory: "エージェントベースモデル",
   },
   {
@@ -431,7 +431,7 @@ var STUDIES = [
       "シミュレーションにより、低頻度・高覚醒の儀礼と高頻度・低覚醒の儀礼がそれぞれ異なるメカニズムで集団の結束や信念伝播を強化することが再現され、分岐様式理論の妥当性が支持された。",
     futureIssues: "モデルの仮定と実地民族誌データとのより厳密な定量的照合が今後の課題として論じられている。",
     url: "https://doi.org/10.1080/2153599X.2012.691033",
-    subjectCategory: "儀礼・信仰",
+    subjectCategory: "信仰・儀礼・怪異",
     modelCategory: "エージェントベースモデル",
   },
   {
@@ -450,8 +450,8 @@ var STUDIES = [
     futureIssues:
       "英語圏以外の伝承歌への適用や、収集者側のバイアス（誰がどの歌を採録したか）の影響評価が今後の課題として挙げられている。",
     url: "https://onlinelibrary.wiley.com/doi/10.1111/oli.12400",
-    subjectCategory: "民謡・伝承歌",
-    modelCategory: "統計的テキスト分析",
+    subjectCategory: "民謡・音楽",
+    modelCategory: "統計モデル",
   },
   {
     id: "study-24",
@@ -470,8 +470,8 @@ var STUDIES = [
       "旋律への影響が小さい変化ほど生じやすいという規則性が日英両方の民謡伝統で共通して見られ、音楽の変異にも遺伝的変異と類似したパターンが存在することが示された。",
     futureIssues: "対象を日英2文化に限定しているため、より多様な音楽文化圏への拡張が今後の課題として言及されている。",
     url: "https://www.cell.com/current-biology/fulltext/S0960-9822(22)00092-6",
-    subjectCategory: "民謡・伝承歌",
-    modelCategory: "配列アラインメント（生物情報学的手法）",
+    subjectCategory: "民謡・音楽",
+    modelCategory: "統計モデル",
   },
   {
     id: "study-25",
@@ -509,8 +509,8 @@ var STUDIES = [
     futureIssues:
       "意味的近さの定義・パラメータ設定の主観性の低減や、より多くの神話体系への適用が今後の課題として挙げられている。",
     url: "https://arxiv.org/abs/2109.08023",
-    subjectCategory: "神話",
-    modelCategory: "グラフ理論・ファジィネットワーク分析",
+    subjectCategory: "神話・叙事詩",
+    modelCategory: "ネットワーク科学",
   },
   {
     id: "study-27",
@@ -528,7 +528,7 @@ var STUDIES = [
       "『タン・ボー・フライヒ』のネットワーク構造は関連するアルスター物語群の他の小物語と統計的に類似しており、物語群全体が共通の物語的枠組みを共有している可能性が示された。",
     futureIssues: "写本ごとの異同やテキスト解釈の違いがネットワーク構造に与える影響のさらなる検証が今後の課題とされている。",
     url: "https://www.worldscientific.com/doi/abs/10.1142/S0219525922400069",
-    subjectCategory: "神話",
+    subjectCategory: "神話・叙事詩",
     modelCategory: "ネットワーク科学",
   },
   {
@@ -547,8 +547,8 @@ var STUDIES = [
     futureIssues:
       "モチーフの記録密度の地域差の補正や、より精緻な年代推定手法との統合が今後の課題として言及されている。",
     url: "https://link.springer.com/chapter/10.1007/978-3-319-39445-9_5",
-    subjectCategory: "神話",
-    modelCategory: "統計的分布分析",
+    subjectCategory: "神話・叙事詩",
+    modelCategory: "統計モデル",
   },
   {
     id: "study-29",
@@ -567,7 +567,7 @@ var STUDIES = [
       "コーディング基準の主観性の低減や、非西洋圏のシンデレラ型説話への分析対象の拡張が今後の課題として挙げられている。",
     url: "https://www.degruyterbrill.com/document/doi/10.1515/fabula-2023-0003/html",
     subjectCategory: "説話・昔話",
-    modelCategory: "統計的テキスト分析",
+    modelCategory: "統計モデル",
   },
   {
     id: "study-30",
@@ -585,7 +585,7 @@ var STUDIES = [
     futureIssues:
       "遺伝学的データとの対応関係の検証は仮説段階にとどまっており、より広範な地域データや独立した年代測定手法による裏付けが今後の課題である。",
     url: "https://hal.science/hal-00826004",
-    subjectCategory: "神話",
+    subjectCategory: "神話・叙事詩",
     modelCategory: "系統樹・系統ネットワーク分析",
   },
   {
@@ -604,8 +604,8 @@ var STUDIES = [
     futureIssues:
       "単一寺院データに基づくため他地域との比較可能性や、出生・死亡登録の脱漏の程度をより精緻に補正する必要がある。",
     url: "https://www.tandfonline.com/doi/abs/10.1080/0032472031000148936",
-    subjectCategory: "歴史疫学",
-    modelCategory: "人口統計モデル(生命表分析)",
+    subjectCategory: "歴史人口・村落構造",
+    modelCategory: "人口統計モデル",
   },
   {
     id: "study-32",
@@ -624,8 +624,8 @@ var STUDIES = [
     futureIssues:
       "対象4カ村の結果を他の地形条件の地域と比較し、山村特有の人口停滞要因をより体系的に検証する必要がある。",
     url: "https://www.sciencedirect.com/science/article/abs/pii/S1081602X05000357",
-    subjectCategory: "歴史人口学",
-    modelCategory: "人口統計モデル(家族復元法)",
+    subjectCategory: "歴史人口・村落構造",
+    modelCategory: "人口統計モデル",
   },
   {
     id: "study-33",
@@ -644,8 +644,8 @@ var STUDIES = [
     futureIssues:
       "対象地域が東北の限られた村落に偏っているため、西日本など異なる相続慣行を持つ地域データとの体系的比較が今後の課題である。",
     url: "https://kci.go.kr/kciportal/landing/article.kci?arti_id=ART002054789",
-    subjectCategory: "歴史人口学",
-    modelCategory: "人口統計モデル(コーホート生命表・婚姻表)",
+    subjectCategory: "歴史人口・村落構造",
+    modelCategory: "人口統計モデル",
   },
   {
     id: "study-34",
@@ -664,8 +664,8 @@ var STUDIES = [
     futureIssues:
       "対象が東北地方の限定的な地域に留まるため、他地域や身分階層による移動行動の差異を広域データで検証することが今後の課題である。",
     url: "https://www.sciencedirect.com/science/article/abs/pii/S0014498325000142",
-    subjectCategory: "村落構造・人口移動",
-    modelCategory: "統計モデル(イベントヒストリー分析)",
+    subjectCategory: "歴史人口・村落構造",
+    modelCategory: "統計モデル",
   },
   {
     id: "study-35",
@@ -683,8 +683,8 @@ var STUDIES = [
     futureIssues:
       "比較対象地域数が限られており、より多様な地域の家族類型データを収集して類型論を精緻化することが課題として残る。",
     url: "https://www.cambridge.org/core/journals/continuity-and-change/article/abs/two-kinds-of-stemfamily-system-traditional-japan-and-europe-compared/DB44D679B8304ADDBE28678A10EC42D2",
-    subjectCategory: "村落構造・家族構造",
-    modelCategory: "比較歴史人口学(記述統計モデル)",
+    subjectCategory: "歴史人口・村落構造",
+    modelCategory: "人口統計モデル",
   },
   {
     id: "study-36",
@@ -703,7 +703,7 @@ var STUDIES = [
       "モデルは語の生成・伝播の均質性を仮定しており、交通網の発達や都市化による伝播速度の変化を組み込んだ拡張が今後の課題である。",
     url: "https://royalsocietypublishing.org/doi/10.1098/rsif.2020.0335",
     subjectCategory: "方言・言語地理",
-    modelCategory: "個体群ネットワーク上の言語拡散モデル",
+    modelCategory: "伝播・拡散モデル",
   },
   {
     id: "study-37",
@@ -722,7 +722,7 @@ var STUDIES = [
       "モデルは語彙的特徴の伝播のみを扱っており、文法・音韻変化など異なる言語変化のタイプへの適用可能性の検証が今後の課題である。",
     url: "https://link.aps.org/doi/10.1103/PhysRevX.7.031008",
     subjectCategory: "方言・言語地理",
-    modelCategory: "統計物理モデル(表面張力・界面ダイナミクス)",
+    modelCategory: "伝播・拡散モデル",
   },
   {
     id: "study-38",
@@ -741,7 +741,7 @@ var STUDIES = [
       "モデルの更新規則は簡略化されており、話者間の社会的威信や移動パターンなど社会言語学的要因を組み込んだより現実的なモデル化が今後の課題である。",
     url: "https://www.cambridge.org/core/journals/journal-of-linguistic-geography/article/abs/computer-simulation-of-dialect-feature-diffusion/5FC8D58C781597E1FAB72F2413EE1AAE",
     subjectCategory: "方言・言語地理",
-    modelCategory: "セルオートマトンモデル",
+    modelCategory: "伝播・拡散モデル",
   },
   {
     id: "study-39",
@@ -762,7 +762,7 @@ var STUDIES = [
       "系統樹モデルは方言間の空間的接触による特徴の水平伝播を十分に考慮できておらず、系統発生と空間拡散を統合したモデルへの拡張が今後の課題である。",
     url: "https://academic.oup.com/jole/article/8/2/169/7717950",
     subjectCategory: "方言・言語地理",
-    modelCategory: "ベイズ系統樹推定モデル",
+    modelCategory: "系統樹・系統ネットワーク分析",
   },
   {
     id: "study-40",
@@ -781,7 +781,7 @@ var STUDIES = [
       "SNSデータの利用者属性の偏り(年齢層・都市部集中等)による代表性の限界があり、より均質なサンプリングやオフラインデータとの統合が今後の課題である。",
     url: "https://www.cys.cic.ipn.mx/ojs/index.php/CyS/article/view/3104",
     subjectCategory: "方言・言語地理",
-    modelCategory: "統計的境界検定モデル(HSIC・Wilcoxon検定)",
+    modelCategory: "統計モデル",
   },
   {
     id: "study-41",
@@ -799,8 +799,8 @@ var STUDIES = [
     futureIssues:
       "都市単位の集計データに依拠しており、個々の裁判記録レベルでのより詳細な社会ネットワーク再構成が今後の課題として挙げられる。",
     url: "https://digitalcommons.chapman.edu/sociology_articles/104/",
-    subjectCategory: "民間信仰・タブー",
-    modelCategory: "空間的拡散モデル(イベント履歴・都市間ネットワーク)",
+    subjectCategory: "信仰・儀礼・怪異",
+    modelCategory: "伝播・拡散モデル",
   },
   {
     id: "study-42",
@@ -820,8 +820,8 @@ var STUDIES = [
     futureIssues:
       "民族誌記録の質・量が社会間で不均一であり、禁忌の実際の遵守率や個人差を反映したより精緻なデータ収集が今後の課題である。",
     url: "https://peerj.com/articles/13633/",
-    subjectCategory: "民間信仰・タブー",
-    modelCategory: "異文化間統計メタ分析(カイ二乗検定等)",
+    subjectCategory: "信仰・儀礼・怪異",
+    modelCategory: "統計モデル",
   },
   {
     id: "study-43",
@@ -839,8 +839,8 @@ var STUDIES = [
     futureIssues:
       "姓の分布は移住や改姓等の文化的要因にも影響されるため、実際の遺伝マーカーデータとの比較によりアイソニミーの遺伝的妥当性をさらに検証する必要がある。",
     url: "https://www.tandfonline.com/doi/abs/10.1080/03014469800006772",
-    subjectCategory: "親族・同族構造",
-    modelCategory: "アイソニミー分析(隔離距離モデル)",
+    subjectCategory: "親族・地名",
+    modelCategory: "統計モデル",
   },
   {
     id: "study-44",
@@ -858,8 +858,8 @@ var STUDIES = [
     futureIssues:
       "系譜データに含まれない移民や記録の欠落した家系の扱いが課題であり、より広い地理的範囲への手法の一般化も今後の検討課題である。",
     url: "https://www.nature.com/articles/s41431-023-01356-2",
-    subjectCategory: "親族・同族構造",
-    modelCategory: "グラフ理論(系譜ネットワーク解析)",
+    subjectCategory: "親族・地名",
+    modelCategory: "ネットワーク科学",
   },
   {
     id: "study-45",
@@ -877,8 +877,8 @@ var STUDIES = [
     futureIssues:
       "地名の語源同定自体に不確実性が伴うため、語源判定の信頼区間を明示的にモデルへ組み込む拡張が今後の課題とされる。",
     url: "https://arxiv.org/abs/2312.12850",
-    subjectCategory: "地名・姓氏",
-    modelCategory: "確率論的空間分析モデル",
+    subjectCategory: "親族・地名",
+    modelCategory: "統計モデル",
   },
   {
     id: "study-46",
@@ -896,8 +896,8 @@ var STUDIES = [
     futureIssues:
       "苗字の成立時期や由来の歴史的経緯が個々に異なるため、地名由来との関係など苗字成立過程の歴史的検証をさらに深める必要がある。",
     url: "https://jglobal.jst.go.jp/detail?JGLOBAL_ID=201902266799508930",
-    subjectCategory: "地名・姓氏",
-    modelCategory: "マルチレベル分析(階層線形モデル)",
+    subjectCategory: "親族・地名",
+    modelCategory: "統計モデル",
   },
   {
     id: "study-47",
@@ -915,8 +915,8 @@ var STUDIES = [
     futureIssues:
       "地方志など文献史料に基づく寺院所在地の同定には精度の限界があり、考古学的発掘データとのさらなる照合による位置情報の精緻化が今後の課題である。",
     url: "https://www.nature.com/articles/s40494-025-01857-x",
-    subjectCategory: "寺院の空間分布",
-    modelCategory: "空間統計モデル(HGIS・空間的自己相関分析)",
+    subjectCategory: "信仰・儀礼・怪異",
+    modelCategory: "統計モデル",
   },
   {
     id: "study-48",
@@ -934,7 +934,7 @@ var STUDIES = [
     futureIssues:
       "モデルは参加者の選好の同質性を仮定しており、異質な選好や参加者間の血縁・地縁関係(社会的紐帯)がROSCAの安定性に与える影響のさらなる理論的検討が今後の課題である。",
     url: "https://ideas.repec.org/a/aea/aecrev/v83y1993i4p792-810.html",
-    subjectCategory: "相互扶助組織",
-    modelCategory: "動学的最適化モデル・ゲーム理論",
+    subjectCategory: "歴史人口・村落構造",
+    modelCategory: "統計モデル",
   },
 ];
